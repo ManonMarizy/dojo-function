@@ -1,0 +1,41 @@
+function displayTextInBox(string $text) : void
+    -----------------ד
+    |rangée d'espace|
+    |espace text espace |
+    |rangée d'espace|
+    -----------------
+Il faut convertir la string en tableau
+le nombre d'entrée du tableau = nbre de "-" et nbre " " pour construire la displayTextInBox
+
+    $strlength = strlen($text);
+    $boxHeight = 3;
+    $boxLength = $strlength + 5; //  4 + \n
+    
+    for($i=0; $i<3; $i++){
+        if($i===0 || $i === 2){
+            echo --------- \n
+        } else {
+            (i===1)
+            print | espace message espace | \n
+        }
+    }
+
+
+https://www.php.net/manual/en/function.str-repeat.php
+
+┌──────────────────┐
+| XXXXXXXXXXXXXXXX |
+└──────────────────┘
+
+drawLine(int $length, string $position) : void
+if( $position !== "up" && $postion !== "down" )
+    return;
+$border = str_repeat("─", $length - 2);
+if($position === "up") echo "┌" . $border . "┐\n";
+elseif($position === "down") echo "└" . $border . "┘\n";
+
+
+
+$position : soit "up" , soit "down" qui détermine la position de la barre pour pouvoir
+afficher les bons angles de la box en fonction
+Faîtes appel à cette nouvelle fonction dans votre fonction displayTextInBox
